@@ -10,7 +10,7 @@ else
 	exit 1
 fi
 
-curl -s -w \
+curl -s -w -k -L \
 '\n
 Content Type:           \t%{content_type}
 HTTP Code:              \t%{http_code}
@@ -27,11 +27,14 @@ Request Size (bytes):   \t%{size_request}
 Avg. Download Speed:    \t%{speed_download}
 SSL Cert Verificaiton:  \t%{ssl_verify_result}
 Time to SSL Handshake:  \t%{time_appconnect}
+==============================================
 Connect time:           \t%{time_connect}
+App Connect time:		\t%{time_appconnect}
 Lookup time:            \t%{time_namelookup}
-PreXfer time:           \t%{time_pretransfer}
-StartXfer time:         \t%{time_starttransfer}
-Total time:             \t%{time_total}\n' \
+Redirect time:			\t%{time_redirect}
+Pretransfer time:		\t%{time_pretransfer}
+Startransfer time:		\t%{time_starttransfer}
+Total time:				\t%{time_total}\n' \
 -o /dev/null \
 $input_url
 exit 0
