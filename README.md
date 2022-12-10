@@ -5,3 +5,5 @@ Download the curl.cfg file to your local machine. Then run
 ```
 curl -K <location to curl.cfg> <host.domain.com>
 ```
+
+Feel free to add your own config files to the repository. 
