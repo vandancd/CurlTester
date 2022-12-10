@@ -1,11 +1,7 @@
-# CurlTester
+# cURL config file
 Run Curl on a URL to get some performance metrics
-Change the file to be an executable (not mandatory)
-```
-chmod 500 curltester.sh
-```
 Usage:
+Download the curl.cfg file to your local machine. Then run
 ```
-./curltester.sh <host.domain.com>
+curl -K <location to curl.cfg> <host.domain.com>
 ```
-	
